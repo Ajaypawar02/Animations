@@ -57,6 +57,7 @@ async def create_image(api_params : Dict):
         if motion == 'dab' or motion == 'jumping' or motion == 'wave_hello':
             print("started")
             try:
+                print("motion")
               
                 image_to_animation(image_path, char_anno_dir, f"{os.getenv('MOTION')}/{motion}.yaml", os.getenv('RETARGET'))
             except Exception as e:
@@ -65,6 +66,7 @@ async def create_image(api_params : Dict):
                     "message": str(e),
                     "url": None
                 }
+            print(os.getenv("EXPORT_GIF"))
             with open(os.getenv("EXPORT_GIF"), "r") as f:
                 data = yaml.load(f, Loader=yaml.FullLoader)
 
