@@ -37,7 +37,7 @@ def annotations_to_animation(char_anno_dir: str, motion_cfg_fn: str, retarget_cf
         yaml.dump(dict(mvc_cfg), f)
 
     # render the video
-    animated_drawings.render.start(output_mvc_cfn_fn)
+    # animated_drawings.render.start(output_mvc_cfn_fn)
 
 
 if __name__ == '__main__':
