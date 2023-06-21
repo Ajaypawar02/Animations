@@ -57,6 +57,7 @@ async def create_image(api_params : Dict):
         if motion == 'dab' or motion == 'jumping' or motion == 'wave_hello':
             print("started")
             try:
+              
                 image_to_animation(image_path, char_anno_dir, f"{os.getenv('MOTION')}/{motion}.yaml", os.getenv('RETARGET'))
             except Exception as e:
                 return {
@@ -70,6 +71,8 @@ async def create_image(api_params : Dict):
             data['scene']['ANIMATED_CHARACTERS'][0]['character_cfg'] = os.getenv("OUTPUT_CHAR_CFG")
             data["scene"]["ANIMATED_CHARACTERS"][0]["motion_cfg"] = f"{os.getenv('MOTION')}/{motion}.yaml"
             data['scene']['ANIMATED_CHARACTERS'][0]['retarget_cfg'] = os.getenv('RETARGET')
+
+            print(data)
 
             try :
                 with open('example.yaml', 'w') as file:
