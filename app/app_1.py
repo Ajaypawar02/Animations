@@ -77,9 +77,10 @@ async def create_image(api_params : Dict):
             print(data)
 
             try :
-                with open('example.yaml', 'w') as file:
-                    yaml.dump(data, file)
-                render.start("./example.yaml")
+                # with open('example.yaml', 'w') as file:
+                #     yaml.dump(data, file)
+                yaml_data = yaml.dump(data)
+                render.start(yaml_data)
                 audio_url = audio_ocr(image_path)
 
                 audio_path = "./audio.wav"
