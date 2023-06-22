@@ -141,3 +141,4 @@ class MesaView(View):
 
     def cleanup(self) -> None:
         """ No need to destroy a window, as none was created. """
+        osmesa.OSMesaDestroyContext(self.ctx)
