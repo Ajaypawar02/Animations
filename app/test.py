@@ -4,7 +4,7 @@ import os
 sys.path.insert(0,'./Animations')
 sys.path.insert(1,'./examples')
 sys.path.insert(2,'./TextExtraction-to-voice')
-from examples.image_to_animation import image_to_animation
+from image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from animated_drawings import render
