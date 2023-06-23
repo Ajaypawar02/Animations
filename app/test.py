@@ -1,9 +1,9 @@
 import sys
 import yaml
 import os
-sys.path.insert(0,'./Animations/temp/Animations')
-sys.path.insert(1,'./Animations/temp/Animations/examples')
-sys.path.insert(2,'./Animations/temp/Animations/TextExtraction-to-voice')
+sys.path.insert(0,'./Animations')
+sys.path.insert(1,'./Animations')
+sys.path.insert(2,'./Animations')
 from image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
