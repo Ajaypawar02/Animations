@@ -82,10 +82,6 @@ def create_image(api_params : Dict):
 
 
             print(data)
-             with open('examplesssss.yaml', 'w') as file:
-                    yaml.dump(data, file)
-              print(Path('examplesssss.yaml'))
-              render.start('examplesssss.yaml')
             
 
             try :
@@ -95,7 +91,15 @@ def create_image(api_params : Dict):
                 yaml_data = yaml.dump(data)
                 
                 render.start('examplesssss.yaml')
-                render.start('examplesssss.yaml')
+                audio_path = "audio.wav"
+                gif_path = "vedio.gif"
+                audio = AudioFileClip(audio_path)
+                if audio.duration < 10:
+                    audio.duration = 10
+                gif = VideoFileClip(gif_path).set_duration(audio.duration)
+                final_clip = CompositeVideoClip([gif.set_audio(audio)])
+                output_path = "file.mp4"
+                final_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
 
             except Exception as e:
                 return {
