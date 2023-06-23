@@ -8,7 +8,7 @@ print(sys.path)
 # from examples.image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from animated_drawings import render
+from Animations.animated_drawings import render
 from fastapi import FastAPI, Request
 from dotenv import load_dotenv
 from moviepy.editor import *
