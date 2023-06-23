@@ -226,7 +226,7 @@ def audio_ocr(path):
     
 
     apikey = os.getenv("rapid_api") # get your free API key from https://rapidapi.com/k_1/api/large-text-to-speech/
-    filename = "audio.wav"
+    filename = "/home/ubuntu/Animations/audio.wav"
 
     headers = {'content-type': "application/json", 'x-rapidapi-host': "large-text-to-speech.p.rapidapi.com", 'x-rapidapi-key': apikey}
     try:
