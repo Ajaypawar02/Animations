@@ -103,6 +103,7 @@ if __name__ == "__main__":
   ]
 }
   response =  create_image(api_params=api_params)
+  print(response)
                 
 
 
