@@ -102,6 +102,7 @@ async def create_image(api_params : Dict):
                 
                 render.start('examplesssss.yaml')
                 # render.start('examplesssss.yaml')
+                audio_url = audio_ocr(image_path)
 
                 audio_path = "audio.wav"
                 gif_path = "vedio.gif"
