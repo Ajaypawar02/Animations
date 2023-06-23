@@ -79,7 +79,7 @@ def create_image(api_params : Dict):
             
 
             try :
-                yaml_data = yamp.dump(data)
+                yaml_data = yaml.dump(data)
                 render.start(yaml_data)
                 render.start(yaml_data)
 
