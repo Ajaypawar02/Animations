@@ -1,9 +1,10 @@
 import sys
 import yaml
-import os
-sys.path.insert(0,'./Animations')
-sys.path.insert(1,'./examples/')
-sys.path.insert(2,'./TextExtraction-to-voice')
+# import os
+# sys.path.insert(0,'./Animations')
+# sys.path.insert(1,'./examples/')
+# sys.path.insert(2,'./TextExtraction-to-voice')
+sys.path.append('/home/ubuntu/Animations')
 print(sys.path)
 # from examples.image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
