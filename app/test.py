@@ -76,10 +76,12 @@ def create_image(api_params : Dict):
             data['scene']['ANIMATED_CHARACTERS'][0]['retarget_cfg'] = os.getenv('RETARGET')
 
             print(data)
+            
 
             try :
-                render.start('./examples/config/mvc/export_gif_example.yaml')
-                render.start('./examples/config/mvc/export_gif_example.yaml')
+                yaml_data = yamp.dump(data)
+                render.start(yaml_data)
+                render.start(yaml_data)
 
             except Exception as e:
                 return {
