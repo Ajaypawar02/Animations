@@ -110,7 +110,7 @@ async def create_image(api_params : Dict):
                     audio.duration = 10
                 gif = VideoFileClip(gif_path).set_duration(audio.duration)
                 final_clip = CompositeVideoClip([gif.set_audio(audio)])
-                output_path = "./file.mp4"
+                output_path = "file.mp4"
                 final_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
 
             except Exception as e:
@@ -120,12 +120,12 @@ async def create_image(api_params : Dict):
                     "url": None
                 }
             finally:
-                upload_result = cloudinary.uploader.upload("./file.mp4", resource_type="auto")
-                os.remove("./example.yaml")
+                upload_result = cloudinary.uploader.upload("file.mp4", resource_type="auto")
+                # os.remove("./example.yaml")
                 
-                os.remove("./vedio.gif")
-                os.remove("./audio.wav")
-                os.remove("./file.mp4")
+                os.remove("vedio.gif")
+                os.remove("audio.wav")
+                # os.remove("./file.mp4")
         elif motion == 'jesse_dance':
             try:
                 image_to_animation(image_path, char_anno_dir, f"{os.getenv('MOTION')}/{motion}.yaml", os.getenv('RETARGET_JESSE'))
