@@ -84,8 +84,8 @@ async def create_image(api_params : Dict):
             render.start('examplesssss.yaml')
             # render.start('examplesssss.yaml')
 
-            audio_path = "./audio.wav"
-            gif_path = "./vedio.gif"
+            audio_path = "/home/ubuntu/Animations/audio.wav"
+            gif_path = "/home/ubuntu/Animations/vedio.gif"
             audio = AudioFileClip(audio_path)
             if audio.duration < 10:
                 audio.duration = 10
@@ -103,8 +103,8 @@ async def create_image(api_params : Dict):
                 render.start('examplesssss.yaml')
                 # render.start('examplesssss.yaml')
 
-                audio_path = "./audio.wav"
-                gif_path = "./vedio.gif"
+                audio_path = "/home/ubuntu/Animations/audio.wav"
+                gif_path = "/home/ubuntu/Animations/vedio.gif"
                 audio = AudioFileClip(audio_path)
                 if audio.duration < 10:
                     audio.duration = 10
