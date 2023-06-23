@@ -100,7 +100,7 @@ if __name__ == "__main__":
     "https://res.cloudinary.com/djvu7apub/image/upload/v1686329604/char3.jpg"
   ]
 }
-  response = create_image(api_params=api_params)
+  response = await create_image(api_params=api_params)
                 
 
 
