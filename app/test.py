@@ -17,6 +17,7 @@ from moviepy.editor import *
 import urllib.request
 import uvicorn
 from typing import Dict
+from pathlib import Path
 import json
 load_dotenv()
 import cloudinary
@@ -84,9 +85,13 @@ def create_image(api_params : Dict):
             
 
             try :
+                with open('example.yaml', 'w') as file:
+                    yaml.dump(data, file)
+                print(Path(example.yaml))
                 yaml_data = yaml.dump(data)
-                render.start(yaml_data)
-                render.start(yaml_data)
+                
+                render.start('example.yaml')
+                render.start('example.yaml')
 
             except Exception as e:
                 return {
