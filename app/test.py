@@ -1,7 +1,7 @@
 import sys
 import yaml
 import os
-sys.path.insert(0,'./Animations/')
+sys.path.insert(0,'./Animations')
 sys.path.insert(1,'./examples/')
 sys.path.insert(2,'./TextExtraction-to-voice')
 print(sys.path)
