@@ -58,7 +58,9 @@ def create_image(api_params : Dict):
             try:
                 print("motion")
               
+              
                 image_to_animation(image_path, char_anno_dir, f"{os.getenv('MOTION')}/{motion}.yaml", os.getenv('RETARGET'))
+                print("executed")
             except Exception as e:
                 return {
                     "status": "error",
