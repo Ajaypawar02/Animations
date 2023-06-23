@@ -1,7 +1,7 @@
 import sys
 import yaml
 import os
-sys.path.insert(0,'./AnimatedDrawings')
+sys.path.insert(0,'./Animations/temp/Animations')
 sys.path.insert(1,'./examples')
 sys.path.insert(2,'./TextExtraction-to-voice')
 from examples.image_to_animation import image_to_animation
