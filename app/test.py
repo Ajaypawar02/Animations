@@ -78,11 +78,8 @@ def create_image(api_params : Dict):
             print(data)
 
             try :
-                # with open('example.yaml', 'w') as file:
-                #     yaml.dump(data, file)
-                yaml_data = yaml.dump(data)
-                render.start(yaml_data)
-                render.start(yaml_data)
+                render.start('./examples/config/mvc/export_gif_example.yaml')
+                render.start('./examples/config/mvc/export_gif_example.yaml')
 
             except Exception as e:
                 return {
