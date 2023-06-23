@@ -541,7 +541,7 @@ async def Animation(request: Request, payload : APIPARAMTERS):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=7000)
+    uvicorn.run('app_1:app', host="0.0.0.0", port=7000, workers=4)
     print("Setup Complete")
 
     
