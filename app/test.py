@@ -6,7 +6,6 @@ import yaml
 # sys.path.insert(2,'./TextExtraction-to-voice')
 sys.path.append('/home/ubuntu/Animations')
 sys.path.append('/home/ubuntu/Animations/TextExtraction-to-voice')
-print(sys.path)
 from examples.image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
