@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from animated_drawings import render
 from fastapi import FastAPI, Request
 from dotenv import load_dotenv
+from pathlib import Path
 from moviepy.editor import *
 import urllib.request
 import uvicorn
