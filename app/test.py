@@ -78,11 +78,11 @@ def create_image(api_params : Dict):
             print(data)
 
             try :
-                with open('example.yaml', 'w') as file:
-                    yaml.dump(data, file)
+                # with open('example.yaml', 'w') as file:
+                #     yaml.dump(data, file)
                 yaml_data = yaml.dump(data)
-                render.start('./example.yaml')
-                render.start('./example.yaml')
+                render.start(yaml_data)
+                render.start(yaml_data)
 
             except Exception as e:
                 return {
