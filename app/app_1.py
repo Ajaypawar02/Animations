@@ -1,9 +1,9 @@
 import sys
 import yaml
 import os
-sys.path.insert(0,'./AnimatedDrawings')
-sys.path.insert(1,'./examples')
-sys.path.insert(2,'./TextExtraction-to-voice')
+sys.path.append('/home/ubuntu/Animations')
+sys.path.append('/home/ubuntu/Animations/examples')
+sys.path.append('/home/ubuntu/Animations/TextExtraction-to-voice')
 from examples.image_to_animation import image_to_animation
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -77,11 +77,13 @@ async def create_image(api_params : Dict):
             print(data)
 
             try :
-                # with open('example.yaml', 'w') as file:
-                #     yaml.dump(data, file)
+                with open('examplesssss.yaml', 'w') as file:
+                    yaml.dump(data, file)
+                print(Path('examplesssss.yaml'))
                 yaml_data = yaml.dump(data)
-                render.start(yaml_data)
-                audio_url = audio_ocr(image_path)
+                
+                render.start('examplesssss.yaml')
+                # render.start('examplesssss.yaml')
 
                 audio_path = "./audio.wav"
                 gif_path = "./vedio.gif"
