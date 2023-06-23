@@ -77,11 +77,6 @@ async def create_image(api_params : Dict):
 
             print(data)
 
-            with open('examplesssss.yaml', 'w') as file:
-                    yaml.dump(data, file)
-            print(Path('examplesssss.yaml'))
-            render.start('examplesssss.yaml')
-
             try :
                 with open('examplesssss.yaml', 'w') as file:
                     yaml.dump(data, file)
