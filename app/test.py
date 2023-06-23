@@ -21,6 +21,7 @@ from get_image import  audio_ocr
 from schemas import APIPARAMTERS
 
 
+
 cloudinary.config(
   cloud_name = "djvu7apub",
   api_key = "433374637814992",
@@ -58,7 +59,7 @@ def create_image(api_params : Dict):
             try:
                 print("motion")
               
-              
+                print(sys.path)
                 image_to_animation(image_path, char_anno_dir, f"{os.getenv('MOTION')}/{motion}.yaml", os.getenv('RETARGET'))
                 print("executed")
             except Exception as e:
@@ -71,9 +72,10 @@ def create_image(api_params : Dict):
             with open(os.getenv("EXPORT_GIF"), "r") as f:
                 data = yaml.load(f, Loader=yaml.FullLoader)
 
-            data['scene']['ANIMATED_CHARACTERS'][0]['character_cfg'] = os.getenv("OUTPUT_CHAR_CFG")
-            data["scene"]["ANIMATED_CHARACTERS"][0]["motion_cfg"] = f"{os.getenv('MOTION')}/{motion}.yaml"
-            data['scene']['ANIMATED_CHARACTERS'][0]['retarget_cfg'] = os.getenv('RETARGET')
+            # data['scene']['ANIMATED_CHARACTERS'][0]['character_cfg'] = os.getenv("OUTPUT_CHAR_CFG")
+            # data["scene"]["ANIMATED_CHARACTERS"][0]["motion_cfg"] = f"{os.getenv('MOTION')}/{motion}.yaml"
+            # data['scene']['ANIMATED_CHARACTERS'][0]['retarget_cfg'] = os.getenv('RETARGET')
+
 
             print(data)
             
